@@ -7,34 +7,9 @@ public class ActionRPGGame : ModuleRules
 	public ActionRPGGame(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-        PublicIncludePaths.AddRange(
-        new string[] {
-                "AbilityFramework",
-                "AbilityFramework/Abilities",
-                "AbilityFramework/Attributes",
-                "AbilityFramework/Effects",
-                "AbilityFramework/Public",
-                "ActionRPGGame/Abilities",
-                "ActionRPGGame/AI",
-                "ActionRPGGame/Attributes",
-                "ActionRPGGame/UI",
-                "ActionRPGGame/UI/Abilities"
-            // ... add public include paths required here ...
-            }
-        );
-
+       
             PrivateIncludePaths.AddRange(
             new string[] {
-                    "AbilityFramework",
-                    "AbilityFramework/Abilities",
-                    "AbilityFramework/Attributes",
-                    "AbilityFramework/Effects",
-                    "AbilityFramework/Private",
-                    "ActionRPGGame/Abilities",
-                    "ActionRPGGame/AI",
-                    "ActionRPGGame/Attributes",
-                    "ActionRPGGame/UI",
-                    "ActionRPGGame/UI/Abilities"
                 // ... add other private include paths required here ...
                 }
             );
@@ -45,20 +20,34 @@ public class ActionRPGGame : ModuleRules
             "InputCore",
             "Slate",
             "SlateCore",
+            "Json",
+            "JsonUtilities",
             "UMG",
             "GameplayTags",
             "AbilityFramework",
             "AssetRegistry",
+            "OrionAnimation",
             //"Sockets",
             //"OnlineSubsystemUtils",
             "ActorSequence",
             "AbilityManager",
-            "DraggableWindow"
+            "DraggableWindow",
+            "JsonUObject",
+            "InventoryFramework",
+            "InventoryFrameworkUI",
+			"GameSparks",
+			"OnlineSubsystem",
+			"OnlineSubsystemGameSparks"
         });
         if (Target.Type == TargetRules.TargetType.Editor)
         {
             PublicDependencyModuleNames.AddRange(new string[] { "UnrealEd", "SourceControl", "Matinee", "PropertyEditor", "ShaderCore", "AbilityFrameworkEditor" });
             PrivateDependencyModuleNames.AddRange(new string[] { "AbilityFrameworkEditor" });
         }
+
+        //if (Target.Type == TargetRules.TargetType.Server)
+        //{
+        //    PublicDependencyModuleNames.AddRange(new string[] { "GameLiftServerSDK" });
+        //}
     }
 }

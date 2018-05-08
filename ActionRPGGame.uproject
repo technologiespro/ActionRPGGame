@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{A36EBF10-476D-8159-343E-8FA796F9AC8F}",
+	"EngineAssociation": "{AB02FCC6-45E0-8362-E7EB-B98E6E6B9DF2}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -12,10 +12,14 @@
 				"AbilityFramework",
 				"AbilityFrameworkDebugger",
 				"AbilityManager",
+				"InventoryFramework",
 				"Engine",
 				"AIModule",
 				"UMG",
-				"CoreUObject"
+				"CoreUObject",
+				"Slate",
+				"SlateCore",
+				"InventoryFrameworkUI"
 			]
 		},
 		{
@@ -27,6 +31,7 @@
 				"AbilityFrameworkEditor",
 				"AbilityFrameworkDebugger",
 				"AbilityManager",
+				"InventoryFramework",
 				"Engine",
 				"AIModule",
 				"UMG",
@@ -49,6 +54,14 @@
 		},
 		{
 			"Name": "AbilityManager",
+			"Enabled": true
+		},
+		{
+			"Name": "InventoryFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "InventoryFrameworkUI",
 			"Enabled": true
 		},
 		{
@@ -164,6 +177,40 @@
 		},
 		{
 			"Name": "GLTFImporter",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamAudio",
+			"Enabled": true
+		},
+		{
+			"Name": "ResonanceAudio",
+			"Enabled": false
+		},
+		{
+			"Name": "CodeView",
+			"Enabled": true
+		},
+		{
+			"Name": "SignificanceManager",
+			"Enabled": true
+		},
+		{
+			"Name": "CustomAnimNode",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8901af6d589b40b68d763b44c9ced66c"
+		},
+		{
+			"Name": "Substance",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2f6439c2f9584f49809d9b13b16c2ba4"
+		},
+		{
+			"Name": "LiveLink",
+			"Enabled": true
+		},
+		{
+			"Name": "ReplicationGraph",
 			"Enabled": true
 		}
 	],
